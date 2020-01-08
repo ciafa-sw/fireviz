@@ -41,29 +41,18 @@
 		}); // add layer drone
 
 		map.addSource('fire', { type: 'geojson', data: fire_url });
-
+/*
 		map.addLayer({
 			'id': 'fire',
 			'type': 'fill',
 			'source': "fire",
 			'layout': {},
 			'paint': {
-				'fill-color': '#ed6300',
+				'fill-color': '#088',
 				'fill-opacity': 0.8
-			},
-			'filter': ['==', '$type', 'Polygon']
-		}); // add layer fire 
+			}
+		}); // add layer fire */
 
-		/*map.addLayer({
-		'id': 'fire',
-		'type': 'fill',
-		'source': 'fire',
-		'paint': {
-		'fill-color': '#888888',
-		'fill-opacity': 0.4
-		},
-		'filter': ['==', '$type', 'Polygon']
-		});*/
 		
 		
 		window.setInterval(function() {
@@ -74,7 +63,17 @@
 
     }); //map on load
 
-
+	map.addLayer({
+			'id': 'fire',
+			'type': 'fill',
+			'source': 'fire',
+			'paint': {
+			'fill-color': '#888888',
+			'fill-opacity': 0.4
+			},
+			'filter': ['==', '$type', 'Polygon']
+			});
+		
 
   </script>
   
