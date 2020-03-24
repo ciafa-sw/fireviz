@@ -1,0 +1,4 @@
+- send several geometries to backend through API 
+- show received geometries in frontend - (distinguish them with colors? how to keep track of color-geometry pais?)
+- guardar ultima geometria recebida algures para o caso do serviço ir a abaixo
+- save last received geometries somewhere in case of service interruption
