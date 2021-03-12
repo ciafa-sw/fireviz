@@ -64,15 +64,17 @@ def fire():
     return jsonify(feature)
 
 
-def move_polygons():
+def move_polygons(polygons_lst):
     delta = 0.0001
-    for polygon in polygons:
+    for polygon in polygons_lst:
+    
         for p in polygon['points']:
             p['lat'] = p['lat'] + delta
+    return polygons_lst
 
 @app.route('/fire2')
 def fire2():
-    move_polygons()
+    new_polygons = move_polygons()
     processed_polys = []
     for polygon in polygons:
             points = [geojson.Point((p['lat'], p['lon'])) for p in polygon['points']]

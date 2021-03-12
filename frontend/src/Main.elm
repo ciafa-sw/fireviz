@@ -37,6 +37,9 @@ import Json.Decode as Dec
 --import Json.Decode.Pipeline exposing (optional, required)
 import Json.Encode as Enc
 
+import Html
+import Html.Attribute as Attr
+
 import Element as E exposing (Element, el, text, column, row, alignRight, fill, width, rgb255, spacing, centerY, padding)
 import Element.Background as Background
 import Element.Border as Border
@@ -44,6 +47,7 @@ import Element.Font as Font
 import Element.Input as Input
 
 import Html
+import Html.Attribute
 
 
 -- Model
@@ -165,7 +169,7 @@ fireVisorView model =
                 , E.centerY
                     , E.spacing 10
                 ]
-                [ text "operation data"
+                [ E.el [Element.htmlAttribute <| Html.Attribute.id "map"] (E.text "map")
                 ]
             ]
 

@@ -1,3 +1,4 @@
 *~
 *.pyc
 **elm-stuff/
+.vscode
